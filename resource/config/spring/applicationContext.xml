@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	<!-- 加载jdbc.property,hibenrate.properties -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:setting/jdbc.properties</value>
+				<value>classpath:setting/hibernate.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- dataSource -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}">
+		</property>
+		<property name="url" value="${jdbc.url}">
+		</property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<property name="maxIdle" value="3"></property>
+		<property name="maxActive" value="5"></property>
+	</bean>
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.soft.security.domain</value>
+				<value>com.soft.work.domain</value>
+				<value>com.wb.core.domain</value>
+				<value>com.wb.attendance.domain</value>
+				<value>com.wb.email.domain</value>
+				<value>com.wb.comm.domain</value>
+				<value>com.wb.notice.domain</value>
+				<value>com.wb.vote.domain</value>
+				<value>com.wb.task.domain</value>
+				<value>com.wb.share.domain</value>
+				<value>com.wb.report.domain</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+				<prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+				<prop key="hibernate.net.sf.ehcache.configurationResourceName">${hibernate.net.sf.ehcache.configurationResourceName}
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<!--
+					<prop key="hibernate.show_sql">${hibernate.show_sql}</prop> <prop
+					key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				-->
+				<prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="do*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="REQUIRED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config proxy-target-class="true">
+		<aop:pointcut
+			expression="execution(* com.soft.security.dao.*.*(..)) || execution(* com.soft.core.dao.*.*(..)) || execution(* com.wb.share.dao.*.*(..))  || execution(* com.wb.report.dao.*.*(..)) || execution(* com.wb.task.dao.*.*(..))|| execution(* com.wb.vote.dao.*.*(..))|| execution(* com.wb.notice.dao.*.*(..))|| execution(* com.wb.email.dao.*.*(..))|| execution(* com.wb.notice.dao.*.*(..)) || execution(* com.soft.process.dao.*.*(..))|| execution(* com.soft.work.dao.*.*(..))|| execution(* com.wb.core.dao.*.*(..))|| execution(* com.wb.attendance.dao.*.*(..))|| execution(* com.wb.comm.dao.*.*(..))"
+			id="securityMethods" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="securityMethods" />
+	</aop:config>
+	<context:component-scan base-package="com.soft,com.wb"></context:component-scan>
+	<context:annotation-config></context:annotation-config>
+	<tx:annotation-driven />
+
+</beans>

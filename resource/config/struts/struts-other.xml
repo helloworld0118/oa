@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.maxSize" value="104857600000" />
+	<package name="email" namespace="/email" extends="struts-default">
+		<action name="email" class="emailAction">
+			<param name="fileName"></param>
+			<result name="success" type="stream">
+				<!-- 下载文件类型定义 -->
+				<param name="contentType">text/plain</param>
+				<!-- 下载文件处理方法 -->
+				<param name="contentDisposition">
+					attachment;filename="${downloadChineseFileName}"  
+	                </param>
+				<!-- 下载文件输出流定义 -->
+				<param name="inputName">DownloadFile</param>
+			</result>
+		</action>
+
+	</package>
+	<package name="task" namespace="/task" extends="struts-default">
+		<action name="taskInfo" class="taskInfoAction">
+		</action>
+		<action name="taskEvent" class="taskEventAction">
+		</action>
+	</package>
+	<package name="share" namespace="/share" extends="struts-default">
+		<action name="shareManager" class="shareManagerAction">
+			<param name="fileName"></param>
+			<result name="success" type="stream">
+				<!-- 下载文件类型定义 -->
+				<param name="contentType">text/plain</param>
+				<!-- 下载文件处理方法 -->
+				<param name="contentDisposition">
+					attachment;filename="${downloadChineseFileName}"  
+	                </param>
+				<!-- 下载文件输出流定义 -->
+				<param name="inputName">DownloadFile</param>
+			</result>
+		</action>
+	</package>
+	<package name="notice" namespace="/notice" extends="struts-default">
+		<action name="notice" class="noticeInfoAction">
+		</action>
+	</package>
+	<package name="report" namespace="/report" extends="struts-default">
+		<action name="report" class="reportAction">
+		</action>
+	</package>
+	<package name="vote" namespace="/vote" extends="struts-default">
+		<action name="vote" class="voteSubjectAction">
+		</action>
+	</package>
+	<package name="comm" namespace="/comm" extends="struts-default">
+		<action name="comm" class="commAction">
+		</action>
+	</package>
+	<package name="remind" namespace="/remind" extends="struts-default">
+		<action name="remind" class="remindAction">
+		</action>
+	</package>
+</struts>    

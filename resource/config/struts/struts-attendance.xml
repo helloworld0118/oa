@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="attendance" namespace="/attendance" extends="struts-default">
+		<action name="workExtra" class="workExtraAction">
+		</action>
+		<action name="outApply" class="outApplyAction">
+		</action>
+		<action name="workout" class="workoutAction">
+		</action>
+		<action name="workCensus" class="workCensusAction">
+			<param name="fileName"></param>
+			<result name="success" type="stream">
+				<!-- 下载文件类型定义 -->
+				<param name="contentType">text/plain</param>
+				<!-- 下载文件处理方法 -->
+				<param name="contentDisposition">
+					attachment;filename="${downloadChineseFileName}"  
+	                </param>
+				<!-- 下载文件输出流定义 -->
+				<param name="inputName">DownloadFile</param>
+			</result>
+		</action>
+	</package>
+
+</struts>    

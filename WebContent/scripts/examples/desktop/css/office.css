@@ -1,0 +1,151 @@
+.office {
+    background-image: url( ../images/img/office.png) !important;
+}
+.office-shortcut {
+    background-image: url(../images/img/office_large.png);
+    width: 46px;
+    height: 46px;
+}
+.vote {
+    background-image: url( ../images/img/vote_small.png) !important;
+}
+.vote-shortcut {
+    background-image: url(../images/img/vote.png);
+    width: 46px;
+    height: 46px;
+}
+.comm {
+    background-image: url( ../images/img/comm_small.png) !important;
+}
+.comm-shortcut {
+    background-image: url(../images/img/comm.png);
+    width: 46px;
+    height: 46px;
+}
+.email {
+    background-image: url( ../images/office/email.png ) !important;
+}
+.email_title {
+    background-image: url( ../images/office/email/email.png) !important;
+}
+.email_search{
+    background-image: url( ../images/office/email/email_search.gif) !important;
+}
+.email-shortcut {
+    background-image: url(../images/office/emailLarge.png);
+    width: 46px;
+    height: 46px;
+}
+.email-recBox {
+    background-image: url( ../images/office/email/email_05.png ) !important;
+}
+.email-sendBox {
+    background-image: url( ../images/office/email/email_04.png ) !important;
+}
+.email-straw {
+    background-image: url( ../images/office/email/email_07.png ) !important;
+}
+.email-dustbin {
+    background-image: url( ../images/office/email/email_02.png ) !important;
+}
+.email-rec {
+    background-image: url( ../images/office/email/email_10.png) !important;
+}
+.email-send {
+    background-image: url( ../images/office/email/email_09.png) !important;
+}
+.check-img {
+    background-image: url( ../images/office/check.png ) !important;
+}
+.checked-img {
+    background-image: url( ../images/office/checked.png ) !important;
+}
+.help {
+    background-image: url( ../images/img/system_help.png) !important;
+}
+.help_video {
+    background-image: url( ../images/img/icon-edit-video.png) !important;
+}
+.help_img {
+    background-image: url( ../images/img/icon-cnoa-my-info.png) !important;
+}
+.save{
+	background-image: url(../images/office/save.png)!important;
+}
+.upload-icon{
+	background-image: url(../images/image_add.png)!important;
+}
+.apply_user{
+	background-image: url(../images/img/expand-members.gif)!important;
+}
+.exam_user{
+	background-image: url(../images/img/example.gif)!important;
+}
+.wb_work_user{
+	background-image: url(../images/icons/fam/layout_edit.png)!important;
+}
+.wb_process{
+	background-image: url(../images/img/icon-form-combobox.gif)!important;
+}
+.wb_award{
+	background-image: url(../images/img/award.png)!important;
+}
+.wb_arrange{
+	background-image: url(../images/icons/fam/layout_add.png)!important;
+}
+.wb_task_list{
+	background-image: url(../images/icons/fam/layout.png)!important;
+}
+.wb_work_note{
+	background-image: url(../images/icons/fam/table.png)!important;
+}
+.wb_work_note{
+	background-image: url(../images/icons/fam/table_add.png)!important;
+}
+.wb_work_apply{
+	background-image: url(../images/icons/fam/table.png)!important;
+}
+.wb_share_img{
+	background-image: url(../images/img/coins.png)!important;
+}
+.wb_share_manager{
+	background-image: url(../images/img/diagram.gif)!important;
+}
+.wb_downLoad{
+	background-image: url(../images/img/page_download.png)!important;
+}
+.wb_share_item{
+	background-image: url(../images/img/file_small.png)!important;
+}
+.wb_home{
+	background-image: url(../images/img/b_home.png)!important;
+}
+.wb_attach{
+	background-image: url(../images/img/attach.gif)!important;
+}
+.wb_color{
+	background-color: black;
+}
+.wb_system_notice{
+	background-image: url(../images/img/system-notice.gif)!important;
+}
+.wb_read{
+	background-image: url(../images/img/png-0281.png)!important;
+}
+.wb_add_report{
+	background-image: url(../images/img/application--plus.png)!important;
+}
+.game1{
+	background-image: url(../images/game/game1.png)!important;
+}.game2{
+	background-image: url(../images/game/game2.png)!important;
+}
+.wb_vote_show{
+	background-image: url(../images/game/vote_02.png)!important;
+}
+.wb_tab_close{
+	background-image: url(../images/img/tab-close.png)!important;
+}
+.wb_reset{
+	background-image: url(../images/img/undo.gif)!important;
+}

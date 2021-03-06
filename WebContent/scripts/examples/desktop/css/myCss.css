@@ -1,0 +1,246 @@
+div{
+	font: bold;
+}
+a{
+	font-size: 13px;
+}
+.topDiv {
+	background-image: url('../images/img/top_fill.jpg');
+	background-repeat: repeat-x;
+}
+p {
+	margin: 5px;
+}
+.settings {
+	background-image:
+		url(../images/icons/fam/folder_wrench.png);
+}
+
+.userManage {
+	background: url(../images/gif/userManage.png);
+}
+
+.copyright {
+	background-image: url(../images/gif/copyright.gif);
+}
+
+.login {
+	background-image: url(../images/gif/user.gif) !important;
+}
+
+.logoff {
+	background-image: url(../images/gif/key.gif) !important;
+}
+
+.usergo {
+	background-image: url(../images/gif/user_go.png)!important;
+}
+.add {
+	background-image: url(../images/access/tree/drop-add.gif)!important;
+}
+.refresh{
+	background-image: url(../images/icons/fam/refresh.gif)!important;
+}
+.go{
+	background-image: url(../images/icons/fam/application_go.png)!important;
+}
+.view{
+	background-image: url(../images/icons/fam/application_view_list.png)!important;
+}
+.book{
+	background-image: url(../images/icons/fam/book.png)!important;
+}
+.edit{
+	background-image: url(../images/icons/fam/cog_edit.png)!important;
+}
+.edit0{
+	background-image: url(../images/icons/fam/cog.png)!important;
+}
+.delte{
+	background-image: url(../images/icons/fam/cross.gif)!important;
+}
+.user_delte{
+	background-image: url(../images/icons/fam/user_delete.gif)!important;
+}
+.user_add{
+	background-image: url(../images/icons/fam/user_add.gif)!important;
+}
+.user_man{
+	background-image: url(../images/icons/fam/user_suit.gif)!important;
+}
+.user_female{
+	background-image: url(../images/icons/fam/user_female.gif)!important;
+}
+.my_save{
+	background-image: url(../images/icons/fam/accept.png)!important;
+}
+.search{
+	background-image: url(../images/icons/fam/database_table.png)!important;
+}
+.user_edit{
+	background-image: url(../images/icons/fam/user_edit.png)!important;
+}
+.tabel_edit{
+	background-image: url(../images/gif/table_edit.png)!important;
+}
+.delte0{
+	background-image: url(../images/icons/fam/delete.gif)!important;
+}
+.info{
+	background-image: url(../images/icons/fam/information.png)!important;
+}
+.reg{
+	background-image: url(../images/icons/fam/plugin_add.gif)!important;
+}
+.home{
+	background-image: url(../images/gif/home16.png)!important;
+}
+.date{
+	background-image: url(../images/gif/date.png)!important;
+}
+.up{
+	background-image: url(../images/gif/table_multiple.png)!important;
+}
+.down{
+	background-image: url(../images/gif/table.png)!important;
+}
+.role{
+	background-image: url(../images/gif/passWord.gif)!important;
+}
+.checkAll{
+		background-image: url(../images/gif/checkbox.gif)!important;
+}
+.checkNo{
+		background-image: url(../images/gif/checkboxchecked.gif)!important;	
+}
+.table_edit{
+		background-image: url(../images/gif/table_edit.png)!important;	
+}
+.table_multiple{
+		background-image: url(../images/gif/table_multiple.png)!important;
+}
+.eMail{
+		background-image: url(../images/gif/email_link.png)!important;
+}
+.eMail_open{
+		background-image: url(../images/gif/email_open.png)!important;
+}
+.eMail_new{
+		background-image: url(../images/gif/email.png)!important;
+}
+.recyle{
+		background-image: url(../images/gif/cross.gif)!important;
+}
+.sys_manager{
+		background-image: url(../images/gif/folder_wrench.png)!important;
+}
+.receMail{
+		background-image: url(../images/gif/email_go.png)!important;
+}
+.sendMail{
+		background-image: url(../images/gif/email_edit.png)!important;
+}
+.userPart{
+		background-image: url(../images/gif/userName.gif)!important;
+}
+.user_manager{
+		background-image: url(../images/gif/userManage.png)!important;
+}
+.plugin{
+		background-image: url(../images/gif/plugin.gif)!important;
+}
+.user_gray{
+		background-image: url(../images/gif/user_gray.png)!important;
+}
+.book{
+		background-image: url(../images/gif/book.png)!important;
+}
+.building{
+		background-image: url(../images/gif/building.png)!important;
+}
+.new{
+		background-image: url(../images/gif/new.png)!important;
+}
+.car{
+		background-image: url(../images/gif/car.png)!important;
+}
+.layout{
+		background-image: url(../images/gif/layout.png)!important;
+}
+.car_add{
+		background-image: url(../images/gif/car_add.png)!important;
+}
+.car_delete
+{
+		background-image: url(../images/gif/car_delete.png)!important;
+}
+.layout_link{
+		background-image: url(../images/gif/layout_link.png)!important;
+}
+.page_link{
+		background-image: url(../images/gif/page_link.png)!important;
+}
+.page_edit{
+		background-image: url(../images/gif/page_edit.png)!important;
+}
+.note_edit{
+		background-image: url(../images/gif/edit.gif)!important;
+}
+.date_add{
+		background-image: url(../images/gif/book_add.png)!important;
+}
+.building_link{
+		background-image: url(../images/gif/building_link.png)!important;
+}
+.building_go{
+		background-image: url(../images/gif/building_go.png)!important;
+		}
+.building{
+		background-image: url(../images/gif/building.png)!important;
+		}
+.building_edit{
+		background-image: url(../images/gif/building_edit.png)!important;
+		}
+.building_add{
+		background-image: url(../images/gif/building_add.png)!important;
+		}
+.news_add{
+		background-image: url(../images/gif/newspaper_add.png)!important;
+}
+.news_go{
+		background-image: url(../images/gif/newspaper_go.png)!important;
+}
+.newspaper{
+		background-image: url(../images/gif/newspaper.png)!important;
+}
+.new_edit{
+		background-image: url(../images/gif/edit.gif)!important;
+}
+.new_type{
+		background-image: url(../images/gif/note.png)!important;
+}
+.database_table{
+		background-image: url(../images/gif/database_table.png)!important;
+}
+.database_history{
+		background-image: url(../images/gif/edit.gif)!important;
+}
+.layout_edit2{
+		background-image: url(../images/gif/layout_edit.png)!important;
+}
+.leave{
+		background-image: url(../images/gif/connect.gif)!important;
+}
+.applay{
+		background-image: url(../images/gif/database_table.png)!important;
+}
+.wb_excel{
+		background-image: url(../images/img/excel.gif)!important;
+}
+.wb_mp3{
+		background-image: url(../images/img/icon_mp3.gif)!important;
+}
+.wb_shutdown{
+		background-image: url(../images/img/system-shutdown.png)!important;
+}
+--搜索框样式--

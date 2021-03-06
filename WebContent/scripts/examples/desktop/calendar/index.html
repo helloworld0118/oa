@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人日程</title>
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/examples.css" />
+
+    <script type="text/javascript" src="../../../ext-all.js"></script>
+    <script type="text/javascript" src="src/ext-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+      Ext.Ajax.request( {
+				url : '../../../../security/user!getUserSession',
+				success : function(res) {
+					if (res.responseText != 'false') {
+					} else {
+						window.location.href='../index.jsp';
+					}
+				}
+			});
+    </script>
+    <script type="text/javascript">
+        Ext.Loader.setConfig({
+            enabled: true,
+            paths: {
+                'Ext.calendar': 'src'
+            }
+        });
+        Ext.require([
+            'Ext.calendar.App'
+        ]);
+        Ext.onReady(function(){
+            Ext.create('Ext.calendar.App');
+        });
+    </script>
+</head>
+<body>
+    <div style="display:none;">
+    <div id="app-header-content">
+        <div id="app-logo">
+            <div class="logo-top">&nbsp;</div>
+            <div id="logo-body">&nbsp;</div>
+            <div class="logo-bottom">&nbsp;</div>
+        </div>
+        <h1>Ext JS Calendar</h1>
+        <span id="app-msg" class="x-hidden"></span>
+    </div>
+    </div>
+</body>
+</html>

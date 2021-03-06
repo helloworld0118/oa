@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="process" namespace="/process" extends="struts-default">
+		<action name="definition" class="processDefinitionAction">
+		</action>
+		<action name="instance" class="processInstanceAction">
+		</action>
+		<action name="task" class="processTaskAction">
+		</action>
+		<action name="history" class="processHistoryAction">
+		</action>
+	</package>
+		
+</struts>    

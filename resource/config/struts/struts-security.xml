@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="security" namespace="/security" extends="struts-default">
+		<action name="user" class="userAction">
+		</action>
+		<action name="roleRight" class="roleInfoAction">
+		</action>
+		<action name="depart" class="departAction">
+		</action>
+		<action name="position" class="positionAction">
+		</action>
+		<action name="tree" class="treeAction">
+		</action>
+		<action name="calender" class="calenderAction">
+		</action>
+		<action name="desktop" class="desktopAction">
+		</action>
+		<action name="userImg" class="userImgAction">
+		</action>
+	</package>
+		
+</struts>    
